@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZentroMart VoiceOps</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="aurora aurora-one"></div>
+    <div class="aurora aurora-two"></div>
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">✦</span><span>ZentroMart <b>VoiceOps</b></span></div>
+        <div class="status"><span class="status-dot"></span><span id="statusText">Ready to listen</span></div>
+      </header>
+
+      <section class="hero">
+        <p class="eyebrow">AI customer support</p>
+        <h1>How can we help<br><em>today?</em></h1>
+        <p class="subhead">Speak naturally. We’ll listen, search the right source, and respond.</p>
+      </section>
+
+      <section class="console">
+        <div class="visualizer" id="visualizer" aria-label="Voice intensity visualizer">
+          <div class="orb"><span class="orb-core"></span></div>
+          <div class="bars" id="bars"></div>
+          <div class="visualizer-label" id="visualizerLabel">Tap the mic to begin</div>
+        </div>
+        <div class="controls">
+          <button class="mic-button" id="micButton" aria-label="Start recording"><span>⌁</span></button>
+          <label class="upload-button" for="fileInput">Upload audio <input id="fileInput" type="file" accept="audio/*"></label>
+          <button class="clear-button" id="clearButton">Clear conversation</button>
+        </div>
+        <p class="hint">Up to 60 seconds · WAV, MP3, FLAC, OGG, M4A, AAC</p>
+      </section>
+
+      <section class="conversation" id="conversation">
+        <div class="empty-state" id="emptyState">
+          <span class="empty-icon">◌</span>
+          <p>Your conversation will appear here.</p>
+        </div>
+      </section>
+
+      <footer>
+        <span>Gnani STT/TTS</span><span>·</span><span>Local Qdrant RAG</span><span>·</span><span>FlashRank grounded retrieval</span>
+      </footer>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
