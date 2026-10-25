@@ -15,7 +15,6 @@ src/tools/tickets_created.csv
 __pycache__/
 *.py[cod]
 .pytest_cache/
-src/data/
 src/kb/
 src/practice/
 evaluation_*.json

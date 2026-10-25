@@ -3,8 +3,9 @@
 Extract the ZIP and open a terminal in the extracted project root. The
 submission runner requires the persisted local Qdrant store at
 `runtime/qdrant/`. Do not delete or rename this directory. The runner does not
-rebuild the vector store and does not require the development KB or dataset
-files at runtime.
+rebuild the vector store and does not require the source KB documents at
+runtime. The synthetic support data under `src/data/` is included because
+order verification, product lookup, and policy calculations use it.
 
 ### Requirements
 
@@ -67,12 +68,17 @@ team_name_voiceops.zip
 ├── runtime/
 │   └── qdrant/
 ├── src/
+│   └── data/
 ├── web/
 ├── web_demo.py
 ├── sample_outputs/
 ├── report.pdf
 └── demo.mp4
 ```
+
+Do not include `.env`, API keys, virtual environments, or the development KB
+and practice evaluation files in the submission ZIP. The runtime support data
+under `src/data/` is required and is intentionally included.
 
 ## Development-only evaluation
 
